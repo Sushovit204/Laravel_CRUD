@@ -51,7 +51,7 @@
                             <td>{{$prod->description}}</td>
                             <td>
                                 <a href="{{url('/edit',$prod->id)}}" class="btn btn-info btn-sm">Edit</a>
-                                <a href="{{url('/delete',$prod->id)}}"class="btn btn-danger btn-sm" data-toggle='modal' data-target="#delete">Delete</a>
+                                <a href="{{url('/delete',$prod->id)}}"class="btn btn-danger btn-sm">Delete</a>
                                 
                             </td>
                         </tr>
