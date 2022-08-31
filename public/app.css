@@ -1,0 +1,15 @@
+body {
+    background: rgb(0, 255, 106);
+    color: rgba(0, 0, 0, 0.823);
+}
+div {
+    background-color: aquamarine;
+    font-size: large;
+    font-style: italic;
+}
+
+input:focus {
+    background-color: beige;
+    font-style: inherit;
+    font-size: large;
+}
