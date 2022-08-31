@@ -18,7 +18,7 @@
                 <form action="" method="POST" >
                     @csrf
                     <div class="mb-3">
-                        <label for="name" class="form-label" >Product Name</label>
+                        <label for="name"  class="form-label" >Product Name</label>
                         <input type="text" class="form-control" id="name" name="name" required="true" autocomplete="off">
                     </div>
                     <div class="mb-3">
@@ -48,12 +48,12 @@
                     <tbody>
                         @foreach ($products as $prod)
                         <tr>
-                            <th>{{$prod->id}}</th>
+                             <th>{{$prod->id}}</th>
                             <td>{{$prod->name}}</td>
                             <td>{{$prod->description}}</td>
                             <td>
-                                <a href="{{url('/edit',$prod->id)}}" class="btn btn-info btn-sm">Edit</a>
-                                <a href="{{url('/delete',$prod->id)}}"class="btn btn-danger btn-sm">Delete</a>
+                                <a href="{{url('/edit',$prod->id)}}" class="btn btn-info btn-sm" onclick="return confirm('Edit the data')">Edit</a>
+                                <a href="{{url('/delete',$prod->id)}}"class="btn btn-danger btn-sm" onclick="return confirm('Are you Sure want to delete')" >Delete</a>
                                 
                             </td>
                         </tr>

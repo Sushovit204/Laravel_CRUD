@@ -1,22 +1,10 @@
-$(document).ready(function () {
-    $("#dialog-box").dialog({
-        autoOpen: false,
-        modal: true,
-    });
-
-    $(".close").click(function (e) {
-        var currentElem = $(this);
-        $("#dialog-box").dialog({
-            buttons: {
-                Confirm: function () {
-                    currentElem.remove();
-                },
-                Cancel: function () {
-                    $(this).dialog("close");
-                },
-            },
-        });
-
-        $("#dialog-box").dialog("open");
-    });
+$("a.btn btn-danger btn-sm").live("click", function (event) {
+    event.stopPropagation();
+    if (confirm("Do you want to delete?")) {
+        this.click;
+        alert("Ok");
+    } else {
+        alert("Cancel");
+    }
+    event.preventDefault();
 });
